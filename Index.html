@@ -25,6 +25,28 @@ a:hover
     text-decoration: underline;
 }
 
+input
+{
+/*        border: 0;*/
+        box-shadow: none;
+        background-color: #FFFFFF;
+        font-family: Raleway;
+        color: red;
+        outline: 0;
+        border-style: solid;
+        border-width: 0 0 2px;
+/*        border-bottom: 2px #<?php echo $Style['text']; ?>;*/
+        border-color: #374E5A;
+        border-radius: 0px;
+        
+/*    https://stackoverflow.com/questions/37465458/input-text-field-with-only-bottom-border/37465540*/
+}
+
+input:focus
+{
+  border-color: red;
+}
+
 .publisher
 {
     color:grey;
@@ -96,7 +118,7 @@ div
                 <div class="response" id="mce-error-response" style="display:none"></div>
                 <div class="response" id="mce-success-response" style="display:none"></div>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8deb0bb0f3dfe79212f9cef9c_b7c89642aa" tabindex="-1" value=""></div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-width: 2px;color:#374E5A">
             </form>
         </p>
     </div>
