@@ -1,27 +1,40 @@
+<?php
+
+
+$Title = "According to Documents";
+$Subtitle = "Investigative journalism of the highest caliber";
+
+$BackgroundColor = "FFFFFF";
+$MainColor = "374E5A";
+$HighlightColor = "FF0000";
+
+$Font_Face = "Raleway";
+
+?>
 <!DOCTYPE html> 
 <html>
 <head>
-<title>According to Documents - Investigative journalism of the highest caliber</title>
+<title><?php echo $Title."-".$Subtitle; ?></title>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <style>
 body
 {
-    background-color: white;
-    font-family: Raleway;
-    color: #374E5A;
+    background-color: #<?php echo $BackgroundColor; ?>;
+    font-family: <?php echo $Font_Face; ?>;
+    color: #<?php echo $MainColor; ?>;
     font-size: 15px;
 }
 
 a
 {
-    color: red;
+    color: #<?php echo $HighlightColor; ?>;
     font-weight: bold;
     text-decoration: none;
 }
 
 a:hover
 {
-    color: red;
+    color: #<?php echo $HighlightColor; ?>;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -29,13 +42,13 @@ a:hover
 input
 {
         box-shadow: none;
-        background-color: #FFFFFF;
-        font-family: Raleway;
-        color: red;
+        background-color: #<?php echo $BackgroundColor; ?>;
+        font-family: <?php echo $Font_Face; ?>;aleway;
+        color: #<?php echo $HighlightColor; ?>;
         outline: 0;
         border-style: solid;
         border-width: 0 0 2px;
-        border-color: #374E5A;
+        border-color: #<?php echo $MainColor; ?>;;
         border-radius: 0px;
         font-size: 15px;
         
@@ -44,7 +57,7 @@ input
 
 input:focus
 {
-  border-color: red;
+  border-color: #<?php echo $HighlightColor; ?>;
 }
 
 .publisher
