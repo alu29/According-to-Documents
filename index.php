@@ -121,6 +121,9 @@ div
             <br>
             <p class="publisher">The Associated Press</p>
             <p class="headline"><a href="https://apnews.com/68a9e1b91de4ffc166acd6012d82c2f9">China didn’t warn public of likely pandemic for 6 key days</a></p>
+            <p class="publisher">Nature</p>
+            <p class="headline"><a href="https://www.nature.com/articles/d41586-020-01108-y">China is tightening its grip on coronavirus research
+</a></p>
     </div>
     <div class="column">
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
