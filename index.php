@@ -119,8 +119,12 @@ div
             <p class="publisher">Indian Express</p>
             <p class="headline"><a href="https://indianexpress.com/article/india/india-lockdown-migrant-movement-labour-death-delhi-agra-morena-6337959/">Last call of an Indian migrant who died walking: "If you can, come get me"</a></p>
             <br>
-            <p class="publisher">Reuters</p>
-            <p class="headline"><a href="www.seattletimes.com">In change, sunny day in Toronto</a></p>
+            <p class="publisher">The Associated Press</p>
+            <p class="headline"><a href="https://apnews.com/68a9e1b91de4ffc166acd6012d82c2f9">China didn’t warn public of likely pandemic for 6 key days</a></p>
+            <br>
+            <p class="publisher">Nature</p>
+            <p class="headline"><a href="https://www.nature.com/articles/d41586-020-01108-y">China is tightening its grip on coronavirus research
+</a></p>
     </div>
     <div class="column">
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
