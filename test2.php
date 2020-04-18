@@ -18,6 +18,23 @@ while ($j <= $NumberOfElementsInHeadlines)
     echo "<br> <br>\n";
 }
 
+foreach($Headlines as $Headline)
+{
+    echo $Headline;
+    $i++;
+}
+
+foreach($ArrayOfElements as $IndividualFromArrayOfElements)
+{
+    echo $Headline;
+    $i++;
+}
+
+
+
+
+
+
 $n= 1; 
 
 while ($n <= 10)
