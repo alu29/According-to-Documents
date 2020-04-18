@@ -116,19 +116,32 @@ div
 
 
         <?php
-            $Publishers = ['New York Times', 'Indian Express', 'The Associated Press', 'Nature'];
-            $Headlines = ['The \'Red Dawn\' Emails: 8 Key Exchanges on the Faltering Response to Coronavirus',
-        'Last call of an Indian migrant who died walking: "If you can, come get me"', 'China didn’t warn public of likely pandemic for 6 key days',
-    'China is tightening its grip on coronavirus research'];
-            $URLs = ['https://www.nytimes.com/2020/04/11/us/politics/coronavirus-red-dawn-emails-trump.html', 'https://indianexpress.com/article/india/india-lockdown-migrant-movement-labour-death-delhi-agra-morena-6337959/',
-            'https://apnews.com/68a9e1b91de4ffc166acd6012d82c2f9', 'https://www.nature.com/articles/d41586-020-01108-y'];
+            require_once 'vendor/autoload.php';
+            use Google\Cloud\Firestore\FirestoreClient;
+            $db = new FirestoreClient();
 
-            while($i<count($Publishers))
+            if(date('Y-m-d')!="2020-04-18")
             {
-                echo "<p class=\"publisher\">".$Publishers[$i]."</p>";
-                echo "<p class=\"headline\"><a href=\"".$URLs[$i]."\">".$Headlines[$i]."</a></p>";
-                echo "<br>";
-                $i = $i+1;
+                $date = date("Y-m-d", strtotime("-".date("w")." days"));
+            }
+            else
+            {
+                $date = "2020-04-19";
+            }
+
+            $articles_db = $db->collection('articles');
+            $query = $articles_db
+                ->where('date', '=', $date)
+                ->limit(5);
+            $articles = $query->documents();
+
+            foreach ($articles as $article)
+            {
+                if ($article->exists())
+                {
+                    echo "<p class=\"publisher\">".$article['publisher']."</p>";
+                    echo "<p class=\"headline\"><a href=\"".$article['url']."\">".$article['headline']."</a></p>";
+                }
             }
         ?>
     </div>
