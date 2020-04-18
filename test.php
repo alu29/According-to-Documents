@@ -8,18 +8,25 @@ use Google\Cloud\Firestore\FirestoreClient;
 
 $db = new FirestoreClient();
 
+
+
 $articles_db = $db->collection('articles');
-$articles = $articles_db->documents();
+$query = $articles_db
+    ->where('date', '=', '2020-04-19')
+    ->orderBy('headline')
+    ->limit(5);
+$articles = $query->documents();
+
 foreach ($articles as $article)
 {
-    echo "<a href=".$article['url'].">".$article['headline']."</a> by ".$article['publisher']."<br><br>";
-    $i=0;
-    foreach ($article['sources'] as $source)
-    {   
-        echo "- ".$source."<br>";
-        $i++;
+    if ($article->exists())
+    {
+        echo "<a href=".$article['url'].">".$article['headline']."</a> by ".$article['publisher']."<br><br>";
     }
-    echo "<hr>";
+    else
+    {
+        // printf('Document %s does not exist!' . PHP_EOL, $snapshot->id());
+    }
 }
 
 ?>
