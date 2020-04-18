@@ -1,14 +1,11 @@
-#service: website
 runtime: php73
 
 handlers:
-  # Serve images as static resources.
-  - url: /(.+\.(gif|png|jpg))$
+  - url: /(.+\.(gif|png|jpg|pdf))$
     static_files: \1
-    upload: .+\.(gif|png|jpg)$
+    upload: .+\.(gif|png|jpg|pdf)$
     secure: always
-  
-  # Serve your app through a front controller at index.php or public/index.php.
+
   - url: .*
     script: auto
     secure: always
