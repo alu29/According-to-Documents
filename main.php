@@ -113,18 +113,24 @@ div
     </div>
     <div class="column">
         <h1>Great journalism</h1>
-            <p class="publisher">New York Times</p>
-            <p class="headline"><a href="https://www.nytimes.com/2020/04/11/us/politics/coronavirus-red-dawn-emails-trump.html">The 'Red Dawn' Emails: 8 Key Exchanges on the Faltering Response to Coronavirus</a></p>
-            <br>
-            <p class="publisher">Indian Express</p>
-            <p class="headline"><a href="https://indianexpress.com/article/india/india-lockdown-migrant-movement-labour-death-delhi-agra-morena-6337959/">Last call of an Indian migrant who died walking: "If you can, come get me"</a></p>
-            <br>
-            <p class="publisher">The Associated Press</p>
-            <p class="headline"><a href="https://apnews.com/68a9e1b91de4ffc166acd6012d82c2f9">China didn’t warn public of likely pandemic for 6 key days</a></p>
-            <br>
-            <p class="publisher">Nature</p>
-            <p class="headline"><a href="https://www.nature.com/articles/d41586-020-01108-y">China is tightening its grip on coronavirus research
-</a></p>
+
+
+        <?php
+            $Publishers = ['New York Times', 'Indian Express', 'The Associated Press', 'Nature'];
+            $Headlines = ['The \'Red Dawn\' Emails: 8 Key Exchanges on the Faltering Response to Coronavirus',
+        'Last call of an Indian migrant who died walking: "If you can, come get me"', 'China didn’t warn public of likely pandemic for 6 key days',
+    'China is tightening its grip on coronavirus research'];
+            $URLs = ['https://www.nytimes.com/2020/04/11/us/politics/coronavirus-red-dawn-emails-trump.html', 'https://indianexpress.com/article/india/india-lockdown-migrant-movement-labour-death-delhi-agra-morena-6337959/',
+            'https://apnews.com/68a9e1b91de4ffc166acd6012d82c2f9', 'https://www.nature.com/articles/d41586-020-01108-y'];
+
+            while($i<count($Publishers))
+            {
+                echo "<p class=\"publisher\">".$Publishers[$i]."</p>";
+                echo "<p class=\"headline\"><a href=\"".$URLs[$i]."\">".$Headlines[$i]."</a></p>";
+                echo "<br>";
+                $i = $i+1;
+            }
+        ?>
     </div>
     <div class="column">
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
