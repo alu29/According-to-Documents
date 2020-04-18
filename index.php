@@ -1,27 +1,40 @@
+<?php
+
+
+$Title = "According to Documents";
+$Subtitle = "Investigative journalism of the highest caliber";
+
+$BackgroundColor = "FFFFFF";
+$MainColor = "374E5A";
+$HighlightColor = "FF0000";
+
+$Font_Face = "Raleway";
+
+?>
 <!DOCTYPE html> 
 <html>
 <head>
-<title>According to Documents - Investigative journalism of the highest caliber</title>
+<title><?php echo $Title."-".$Subtitle; ?></title>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <style>
 body
 {
-    background-color: white;
-    font-family: Raleway;
-    color: #374E5A;
+    background-color: #<?php echo $BackgroundColor; ?>;
+    font-family: <?php echo $Font_Face; ?>;
+    color: #<?php echo $MainColor; ?>;
     font-size: 15px;
 }
 
 a
 {
-    color: red;
+    color: #<?php echo $HighlightColor; ?>;
     font-weight: bold;
     text-decoration: none;
 }
 
 a:hover
 {
-    color: red;
+    color: #<?php echo $HighlightColor; ?>;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -29,13 +42,13 @@ a:hover
 input
 {
         box-shadow: none;
-        background-color: #FFFFFF;
-        font-family: Raleway;
-        color: red;
+        background-color: #<?php echo $BackgroundColor; ?>;
+        font-family: <?php echo $Font_Face; ?>;aleway;
+        color: #<?php echo $HighlightColor; ?>;
         outline: 0;
         border-style: solid;
         border-width: 0 0 2px;
-        border-color: #374E5A;
+        border-color: #<?php echo $MainColor; ?>;;
         border-radius: 0px;
         font-size: 15px;
         
@@ -44,7 +57,7 @@ input
 
 input:focus
 {
-  border-color: red;
+  border-color: #<?php echo $HighlightColor; ?>;
 }
 
 .publisher
@@ -100,14 +113,18 @@ div
     </div>
     <div class="column">
         <h1>Great journalism</h1>
-            <p class="publisher">Seattle Times</p>
-            <p class="headline"><a href="www.seattletimes.com">In change, sunny day in Seattle</a></p>
-            <br>
             <p class="publisher">New York Times</p>
-            <p class="headline"><a href="www.seattletimes.com">In change, sunny day in New York</a></p>
+            <p class="headline"><a href="https://www.nytimes.com/2020/04/11/us/politics/coronavirus-red-dawn-emails-trump.html">The 'Red Dawn' Emails: 8 Key Exchanges on the Faltering Response to Coronavirus</a></p>
             <br>
-            <p class="publisher">Reuters</p>
-            <p class="headline"><a href="www.seattletimes.com">In change, sunny day in Toronto</a></p>
+            <p class="publisher">Indian Express</p>
+            <p class="headline"><a href="https://indianexpress.com/article/india/india-lockdown-migrant-movement-labour-death-delhi-agra-morena-6337959/">Last call of an Indian migrant who died walking: "If you can, come get me"</a></p>
+            <br>
+            <p class="publisher">The Associated Press</p>
+            <p class="headline"><a href="https://apnews.com/68a9e1b91de4ffc166acd6012d82c2f9">China didn’t warn public of likely pandemic for 6 key days</a></p>
+            <br>
+            <p class="publisher">Nature</p>
+            <p class="headline"><a href="https://www.nature.com/articles/d41586-020-01108-y">China is tightening its grip on coronavirus research
+</a></p>
     </div>
     <div class="column">
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
