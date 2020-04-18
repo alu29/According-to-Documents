@@ -104,9 +104,9 @@ div
 <div class="row">
     <div class="column">
         <h1>Welcome</h1>
-        <p>&quot;...according to documents...&quot; &mdash; These words demonstrate investigative journalism of the highest caliber.
+        <p> The words &quot;...according to documents...&quot; demonstrate investigative journalism of the highest caliber.
             <br><br>
-            We want to celebrate the work of reporters who obtain government reports, internal company emails or private chat messages in order to show their stories are true and, ultimately, how journalism based on concrete evidence makes for smarter, deeper stories.
+            We want to celebrate the work of reporters who obtain government reports, internal company emails or private chat messages. Such work highlights how journalism based on concrete evidence makes for smarter, deeper stories.
             <br><br>
             The idea is imperfect, of course, and some excellent reporting will be based on no documents and some terrible reporting will be based on many documents. But ultimately, it's a great rule of thumb.
         </p>
@@ -130,7 +130,7 @@ div
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
             <form action="https://girishgupta.us6.list-manage.com/subscribe/post?u=8deb0bb0f3dfe79212f9cef9c&amp;id=b7c89642aa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <p>You'll get one email every Friday with the best evidence-based journalism in the world. We'll not share you email address or spam you.</p><br>
+                <p>You'll get one email every Friday with the best evidence-based journalism in the world. We won't share your email address or spam you.</p><br>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" style="width:70%;">
                 <div class="response" id="mce-error-response" style="display:none"></div>
                 <div class="response" id="mce-success-response" style="display:none"></div>
