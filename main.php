@@ -155,7 +155,7 @@ if(!$mobile)
 }
 ?>
         <h1>Welcome</h1>
-        <p>The words &quot;according to documents&quot; in a news story signal evidence-based investigative journalism of the highest caliber.
+        <p>The words &quot;according to documents&quot; in a news story signal investigative journalism of the highest caliber.
         <br><br>
         We want to celebrate reporting based on government or corporate reports, emails, private chat messages or something equally tangible—as opposed to that based on unnamed sources or rumors.
         <br><br>
@@ -163,7 +163,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by investigative reporters <a href="https://www.girishgupta.com" target="_blank">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>, a Special Correspondent at <i>Reuters</i>.
+        <p><i>According to Documents</i> was created in April 2020 by investigative reporters <a href="https://www.girishgupta.com" target="_blank">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>, a Special Correspondent at <i>Reuters</i>.
         </p>
 
 <?php
@@ -227,7 +227,7 @@ if(!$mobile)
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
             <form action="https://girishgupta.us6.list-manage.com/subscribe/post?u=8deb0bb0f3dfe79212f9cef9c&amp;id=09c1bd8f01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <p>You'll get one email every Sunday with the best evidence-based journalism in the world. We won't share your email address or spam you.</p><br>
+                <p>You'll get one email every Sunday with our selection of the week's top document-based investigative reporting. (We won't share your email address or spam you.)</p><br>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" style="width:70%;">
                 <div class="response" id="mce-error-response" style="display:none"></div>
                 <div class="response" id="mce-success-response" style="display:none"></div>
