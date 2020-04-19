@@ -149,8 +149,9 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by investigative reporters <a href="https://www.girishgupta.com">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>, a Special Correspondent at Reuters.
+        <p>According to Documents was created by investigative reporters <a href="https://www.girishgupta.com" target="_blank">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>, a Special Correspondent at Reuters.
         </p>
+
 <?php
 if(!$mobile)
 {
@@ -194,11 +195,12 @@ if(!$mobile)
                 if ($article->exists())
                 {
                     echo "<p class=\"publisher\">".$article['publisher']."</p>";
-                    echo "<p class=\"headline\"><a href=\"".$article['url']."\">".$article['headline']."</a></p>";
+                    echo "<p class=\"headline\"><a href=\"".$article['url']."target=\"_blank\">".$article['headline']."</a></p>";
                 }
             }
         ?>
 <?php
+
 if(!$mobile)
 {
 ?>
@@ -235,7 +237,7 @@ if(!$mobile)
                 }
                 else
                 {
-                    echo "<p><font color=#".$HighlightColor." size=8>Thank you!</font</p>";
+                    echo "<p><font color=#".$HighlightColor." size=8>Thank you!</font></p>";
                 }
             ?>
 <?php
@@ -249,7 +251,7 @@ if(!$mobile)
 ?>
 
 <CENTER>
-<p><font size=6><a href="https://www.twitter.com/accordingtodocuments/"><i class="fab fa-twitter"></i></a> <a href="https://github.com/alu29/According-to-Documents"><i class="fab fa-github"></i></a></p>
+<p><font size=6><a href="https://www.twitter.com/accordingtodocuments/" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://github.com/alu29/According-to-Documents" target="_blank"><i class="fab fa-github"></i></a></p>
 <p><font size=2>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a></font></p>
 </CENTER>
 
