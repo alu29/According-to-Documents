@@ -30,6 +30,7 @@ else
 <title><?php echo $Title."-".$Subtitle; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/9057082ce7.js" crossorigin="anonymous"></script>
 <style>
 body
 {
@@ -140,11 +141,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>. Both covered Venezuela for years, reporting on its humanitarian crisis, covering protests and investigating high-level, multi-billion dollar government corruption. Girish is now CTO of <i>Deepnews.ai</i> and continues to dabble in journalism while Alexandra is a Special Correspondent with Reuters in India, and is using this as a vehicle to learn to code.
-        <!-- <br><br>
-        Alexandra is a Special Correspondent with <i>Reuters</i> in India, charged with investigating XXX. Before that, she lifted the lid on Venezuela's corrupt state oil company, revealing XXX, and also XXX. Her work won her Reuters' Reporter of the Year award in 201X.
-        <br><br>
-        Girish was an investigative/multimedia reporter with <i>Reuters</i> baed in Venezuela, after freelancing across Venezuela, the Americas and Middle East with everyone from the <i>New Yorker</i> to <i>BuzzFeed</i>. His investigations revealed high level, high-level, multi-billion-dollar government corruption, exaggeration of electoral results and that the country’s Chief Justice was arrested on suspicion of murder.  The physics graduate and longtime programmer is now Chief Technology Officer at <i>Deepnews.ai</i>, which aims to codify what makes good journalism in a machine learning algorithm. -->
+        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>. Both covered Venezuela for years, reporting on its humanitarian crisis, covering protests and investigating high-level, multi-billion dollar government corruption. Girish is now CTO at <i>Deepnews.ai</i> and continues to dabble in journalism while Alexandra is an investigative reporter with Reuters in India—and is using this site as a vehicle to learn to <a href="https://github.com/alu29/According-to-Documents">code</a>.
         </p>
 <?php
 if(!$mobile)
