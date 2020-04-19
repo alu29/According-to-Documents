@@ -120,14 +120,12 @@ div
             use Google\Cloud\Firestore\FirestoreClient;
             $db = new FirestoreClient();
 
-            if(date('Y-m-d')!="2020-04-18")
-            {
-                $date = date("Y-m-d", strtotime("-".date("w")." days"));
-            }
-            else
-            {
-                $date = "2020-04-19";
-            }
+            $DayOfWeekNumber = date("w"); // On a Sunday, this will be 0; Monday, 1; Tuesday, 2; Wednesday, 3; etc.
+            $DateWeWantAsAString = "-".$DayOfWeekNumber." days"; // On a Sunday, this will just be "- 0 days"; on a monday, this will be "- 1 days"
+            //However, the second parameter of the date() function that we use below, can't handle a string; it needs it to be of type time
+            $DateOfLastSunday = strtotime($DateWeWantAsAString); // This line converts the above ("- x days") to a time (the number of seconds since 1970-01-01)
+            $date = date("Y-m-d", $DateOfLastSunday); // This then converts it to a date in the format Y-m-d
+            // $date = date("Y-m-d", strtotime("-".date("w")." days")); (This is how I had it before, not broken down)
 
             $articles_db = $db->collection('articles');
             $query = $articles_db
