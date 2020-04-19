@@ -209,7 +209,7 @@ if(!$mobile)
                 if ($article->exists())
                 {
                     echo "<p class=\"publisher_or_sources\"><i>".$article['publisher']."</i> citing <b>".$article['sources']."</b></p>";
-                    echo "<p class=\"headline\"><a href=\"".$article['url']."target=\"_blank\">".$article['headline']."</a></p>";
+                    echo "<p class=\"headline\"><a href=\"".$article['url']."\" target=\"_blank\">".$article['headline']."</a></p>";
                     echo "<br>";
                 }
             }
