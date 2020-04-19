@@ -12,9 +12,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/getfromsheet':
         require 'CSVtoFirestore.php';
         break;
-    case '/submit':
-        require 'submit.php';
-        break;
+    // case '/archive':
+    //     require 'archive.php';
+    //     break;
     default:
         http_response_code(404);
         exit('Not Found');
