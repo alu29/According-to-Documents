@@ -1,6 +1,5 @@
 <?php
 
-
 $Title = "According to Documents";
 $Subtitle = "Investigative journalism of the highest caliber";
 
@@ -124,7 +123,7 @@ div
 <CENTER><img src="logo.png" width=250 height=250></CENTER>
 
 <?php
-if(!mobile)
+if(!$mobile)
 {
 ?>
 <div class="row">
@@ -140,7 +139,7 @@ if(!mobile)
             The idea is imperfect, of course, and some excellent reporting will be based on no documents and some terrible reporting will be based on many documents. But ultimately, it's a great rule of thumb.
         </p>
 <?php
-if(!mobile)
+if(!$mobile)
 {
 ?>
     </div>
@@ -190,7 +189,7 @@ if(!mobile)
             }
         ?>
 <?php
-if(!mobile)
+if(!$mobile)
 {
 ?>
     </div>
@@ -210,7 +209,7 @@ if(!mobile)
             </form>
         </p>
 <?php
-if(!mobile)
+if(!$mobile)
 {
 ?>
     </div>
