@@ -43,7 +43,7 @@ input
 {
         box-shadow: none;
         background-color: #<?php echo $BackgroundColor; ?>;
-        font-family: <?php echo $Font_Face; ?>;aleway;
+        font-family: <?php echo $Font_Face; ?>;
         color: #<?php echo $HighlightColor; ?>;
         outline: 0;
         border-style: solid;
