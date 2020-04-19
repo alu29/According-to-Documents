@@ -82,5 +82,58 @@ while ($i < 100000000)
     $i = SquareANumber($i);
 }
 
+function SquareANumber2(int $i)
+
+{
+    return $i * $i;
+}
+
+while ($i <= 100000)
+
+{
+    echo $i . "\n";
+    $i = SquareANumber($i);
+}
+
+$i = 2;
+
+while ($i <= 100)
+
+{
+    echo $i."\n";
+    $i = $i + 10;
+}
+
+$i = 4;
+
+while ($i <= 100)
+
+{
+    echo $i."\n";
+    $i = $i * 4;
+}
+
+$i = 20;
+
+while ($i <= 60)
+
+{
+    echo $i."\n";
+    $i = $i + $i;
+}
+
+$i = 4;
+
+while ($i <= 48)
+
+{
+    echo "Alexandra"."\n";
+    $i = $i * $i;
+}
+
+
+
+
+
 ?>
 
