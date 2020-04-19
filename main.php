@@ -133,10 +133,18 @@ if(!$mobile)
 ?>
         <h1>Welcome</h1>
         <p>The words &quot;according to documents&quot; in a news story signal evidence-based investigative journalism of the highest caliber.
-            <br><br>
-            We want to celebrate reporting based on government or corporate reports, emails, private chat messages or something equally tangible—as opposed to that based on unnamed sources or rumors.
-            <br><br>
-            The idea is imperfect, of course, and some excellent reporting will be based on no documents and some terrible reporting will be based on many documents. But ultimately, it's a great rule of thumb.
+        <br><br>
+        We want to celebrate reporting based on government or corporate reports, emails, private chat messages or something equally tangible—as opposed to that based on unnamed sources or rumors.
+        <br><br>
+        The idea is imperfect, of course, and some excellent reporting will be based on no documents and some terrible reporting will be based on many documents. But ultimately, it's a great rule of thumb.
+        </p>
+
+        <h1>About</h1>
+        <p>According to Documents was created by <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a> and <a href="https://www.girishgupta.com">Girish Gupta</a>. Both covered Venezuela for years, reporting on its humanitarian crisis, covering street clashes and investigating high-level, multi-billion dollar government corruption. Between them, they've worked across the Americas, Middle East and Asia for <i>Reuters</i> and countless other news outlets.
+        <!-- <br><br>
+        Alexandra is a Special Correspondent with <i>Reuters</i> in India, charged with investigating XXX. Before that, she lifted the lid on Venezuela's corrupt state oil company, revealing XXX, and also XXX. Her work won her Reuters' Reporter of the Year award in 201X.
+        <br><br>
+        Girish was an investigative/multimedia reporter with <i>Reuters</i> baed in Venezuela, after freelancing across Venezuela, the Americas and Middle East with everyone from the <i>New Yorker</i> to <i>BuzzFeed</i>. His investigations revealed high level, high-level, multi-billion-dollar government corruption, exaggeration of electoral results and that the country’s Chief Justice was arrested on suspicion of murder.  The physics graduate and longtime programmer is now Chief Technology Officer at <i>Deepnews.ai</i>, which aims to codify what makes good journalism in a machine learning algorithm. -->
         </p>
 <?php
 if(!$mobile)
@@ -147,7 +155,7 @@ if(!$mobile)
 <?php
 }
 ?>
-        <h1>Great journalism</h1>
+        <h1>This week's selection</h1>
 
 
         <?php
