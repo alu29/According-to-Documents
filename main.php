@@ -51,6 +51,7 @@ body
     font-family: <?php echo $Font_Face; ?>;
     color: #<?php echo $MainColor; ?>;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 a
