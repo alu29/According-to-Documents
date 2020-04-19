@@ -10,11 +10,26 @@ $HighlightColor = "FF0000";
 
 $Font_Face = "Raleway";
 
+$iPod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$iPhone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$iPad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+
+if($iPad||$iPhone||$iPod||$android)
+{
+    $mobile = true;
+}
+else
+{
+    $mobile = false;
+}
+
 ?>
 <!DOCTYPE html> 
 <html>
 <head>
 <title><?php echo $Title."-".$Subtitle; ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <style>
 body
@@ -103,14 +118,20 @@ div
 </script>
 </head>
 
-
 <body>
    
 <!-- <h1 class="centeredtext">According to Documents</h1> -->
 <CENTER><img src="logo.png" width=250 height=250></CENTER>
 
+<?php
+if(!mobile)
+{
+?>
 <div class="row">
     <div class="column">
+<?php
+}
+?>
         <h1>Welcome</h1>
         <p>The words &quot;according to documents&quot; in a news story signal evidence-based investigative journalism of the highest caliber.
             <br><br>
@@ -118,8 +139,15 @@ div
             <br><br>
             The idea is imperfect, of course, and some excellent reporting will be based on no documents and some terrible reporting will be based on many documents. But ultimately, it's a great rule of thumb.
         </p>
+<?php
+if(!mobile)
+{
+?>
     </div>
     <div class="column">
+<?php
+}
+?>
         <h1>Great journalism</h1>
 
 
@@ -161,8 +189,15 @@ div
                 }
             }
         ?>
+<?php
+if(!mobile)
+{
+?>
     </div>
     <div class="column">
+<?php
+}
+?>
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
             <form action="https://girishgupta.us6.list-manage.com/subscribe/post?u=8deb0bb0f3dfe79212f9cef9c&amp;id=09c1bd8f01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -174,8 +209,15 @@ div
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-width: 2px;color:#374E5A">
             </form>
         </p>
+<?php
+if(!mobile)
+{
+?>
     </div>
 </div>
+<?php
+}
+?>
 
 </body>
 </html>
