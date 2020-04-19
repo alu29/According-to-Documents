@@ -219,7 +219,7 @@ if(!$mobile)
             <br><br>
 
             <h1>Got a suggestion?</h1>
-            <form action="submit.php" method="post">
+            <form action="/submit" method="post">
                 <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and those covering underreported issues or countries.</p><br>
                 <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
                 <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
