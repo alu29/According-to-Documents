@@ -112,9 +112,9 @@ div
 <div class="row">
     <div class="column">
         <h1>Welcome</h1>
-        <p>The words &quot;according to documents&quot; demonstrate investigative journalism of the highest caliber.
+        <p>The words &quot;according to documents&quot; in a news story signal evidence-based investigative journalism of the highest caliber.
             <br><br>
-            We want to celebrate the work of reporters who obtain government reports, internal company emails or private chat messages. Such work highlights how journalism based on concrete evidence makes for smarter, deeper stories.
+            We want to celebrate reporting based on government or corporate reports, emails, private chat messages or something equally tangible—as opposed to that based on unnamed sources or rumors.
             <br><br>
             The idea is imperfect, of course, and some excellent reporting will be based on no documents and some terrible reporting will be based on many documents. But ultimately, it's a great rule of thumb.
         </p>
