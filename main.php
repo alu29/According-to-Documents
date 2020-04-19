@@ -30,6 +30,7 @@ else
 <title><?php echo $Title."-".$Subtitle; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/9057082ce7.js" crossorigin="anonymous"></script>
 <style>
 body
 {
@@ -226,7 +227,8 @@ if(!$mobile)
 ?>
 
 <CENTER>
-<p><font size=1>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="https://www.twitter.com/accordingtodocs">@AccordingToDocs on Twitter</a> | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a></font></p>
+<p><font size=6><a href="https://www.twitter.com/accordingtodocuments/"><i class="fab fa-twitter"></i></a></font></p>
+<p><font size=1>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a>"</font></p>
 </CENTER>
 
 </body>
