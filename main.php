@@ -89,7 +89,7 @@ input:focus
   border-color: #<?php echo $HighlightColor; ?>;
 }
 
-.publisher
+.publisher_or_sources
 {
     color:grey;
     font-size: 10px;
@@ -194,7 +194,7 @@ if(!$mobile)
             {
                 if ($article->exists())
                 {
-                    echo "<p class=\"publisher\">".$article['publisher']."</p>";
+                    echo "<p class=\"publisher_or_sources\">".$article['publisher']." citing <b>".$article['sources']."</b></p>";
                     echo "<p class=\"headline\"><a href=\"".$article['url']."target=\"_blank\">".$article['headline']."</a></p>";
                 }
             }
