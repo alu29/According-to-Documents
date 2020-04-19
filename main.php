@@ -135,7 +135,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>. Both covered Venezuela for years, reporting on its humanitarian crisis, covering protests and investigating high-level, multi-billion dollar government corruption.<br><br>Girish is now CTO at <i>Deepnews.ai</i> and continues to dabble in journalism and other things while Alexandra is an investigative reporter with Reuters in India—and is using this site as a vehicle to learn to <a href="https://github.com/alu29/According-to-Documents">code</a>.
+        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>.
         </p>
 <?php
 if(!$mobile)
@@ -227,7 +227,7 @@ if(!$mobile)
 ?>
 
 <CENTER>
-<p><font size=6><a href="https://www.twitter.com/accordingtodocuments/"><i class="fab fa-twitter"></i></a></font></p>
+<p><font size=6><a href="https://www.twitter.com/accordingtodocuments/"><i class="fab fa-twitter"></i></a> <a href="https://github.com/alu29/According-to-Documents"><i class="fab fa-github"></i></a></p>
 <p><font size=2>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a></font></p>
 </CENTER>
 
