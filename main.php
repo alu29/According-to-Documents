@@ -228,7 +228,7 @@ if(!$mobile)
 
 <CENTER>
 <p><font size=6><a href="https://www.twitter.com/accordingtodocuments/"><i class="fab fa-twitter"></i></a></font></p>
-<p><font size=1>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a>"</font></p>
+<p><font size=2>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a></font></p>
 </CENTER>
 
 </body>
