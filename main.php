@@ -149,7 +149,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by investigative reporters <a href="https://www.girishgupta.com" target="_blank">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>, a Special Correspondent at Reuters.
+        <p>According to Documents was created by investigative reporters <a href="https://www.girishgupta.com" target="_blank">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>, a Special Correspondent at <i>Reuters</i>.
         </p>
 
 <?php
