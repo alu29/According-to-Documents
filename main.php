@@ -243,7 +243,7 @@ if(!$mobile)
                 {
             ?>
                 <form action="/" method="post">
-                    <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and journalists covering underreported issues or countries.</p><br>
+                    <p>Help us highlight worthwhile reporting by submitting it below or <a href="mailto:hi@accordingtodocuments.com">email us</a>. We welcome work by freelancers, smaller publications and journalists covering underreported issues or countries.</p><br>
                     <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
                     <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
                     <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
@@ -267,7 +267,7 @@ if(!$mobile)
 
 <CENTER>
 <p><font size=6><a href="https://www.twitter.com/accordingtodocs" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://github.com/alu29/According-to-Documents" target="_blank"><i class="fab fa-github"></i></a></p>
-<p><font size=2>&copy; 2020 Girish Gupta and Alexandra Ulmer | <a href="mailto:hi@accordingtodocuments.com">hi@accordingtodocuments.com</a></font></p>
+<p><font size=2>&copy; 2020 Girish Gupta and Alexandra Ulmer </font></p>
 </CENTER>
 
 </body>
