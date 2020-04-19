@@ -92,12 +92,13 @@ input:focus
 .publisher_or_sources
 {
     color:grey;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .headline
 {
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: -13px;
 }
 
 div
@@ -194,8 +195,9 @@ if(!$mobile)
             {
                 if ($article->exists())
                 {
-                    echo "<p class=\"publisher_or_sources\">".$article['publisher']." citing <b>".$article['sources']."</b></p>";
+                    echo "<p class=\"publisher_or_sources\"><i>".$article['publisher']."</i> citing <b>".$article['sources']."</b></p>";
                     echo "<p class=\"headline\"><a href=\"".$article['url']."target=\"_blank\">".$article['headline']."</a></p>";
+                    echo "<br>";
                 }
             }
         ?>
