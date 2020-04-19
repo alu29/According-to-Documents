@@ -232,6 +232,8 @@ if(!$mobile)
 }
 ?>
 
+<p><font size=6><a href="https://www.twitter.com/accordingtodocuments/"><i class="fab fa-twitter"></i></a></font></p>
+
 </body>
 </html>
 
