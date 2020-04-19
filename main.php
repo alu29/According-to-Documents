@@ -222,8 +222,8 @@ if(!$mobile)
             <form action="submit.php" method="post">
                 <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and those covering underreported issues or countries.</p><br>
                 <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
-                <input type="url" value="" name="url" placeholder="URL" style="width:70%;"><br><br>
-                <input type="submit" value="Make Your Suggestion" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
+                <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
+                <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
             </form>
 <?php
 if(!$mobile)
