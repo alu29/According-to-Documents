@@ -135,7 +135,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>.
+        <p>According to Documents was created by investigative reporters <a href="https://www.girishgupta.com">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>, a Special Correspondent at Reuters.
         </p>
 <?php
 if(!$mobile)
