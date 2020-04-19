@@ -243,7 +243,7 @@ if(!$mobile)
                 {
             ?>
                 <form action="/" method="post">
-                    <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and those covering underreported issues or countries.</p><br>
+                    <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and journalists covering underreported issues or countries.</p><br>
                     <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
                     <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
                     <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
