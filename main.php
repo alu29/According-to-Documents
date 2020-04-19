@@ -129,7 +129,7 @@ div
 
             $DateLastSundayInSecondsSinceUnixEpoch= time () - ($DayOfWeekNumber * 60 * 60 * 24);
             $DateLastSundayInYMD = date ("Y-m-d", $DateLastSundayInSecondsSinceUnixEpoch);
-            $date = $DateLastSundayInYMD
+            $date = $DateLastSundayInYMD;
 
             $articles_db = $db->collection('articles');
             $query = $articles_db
