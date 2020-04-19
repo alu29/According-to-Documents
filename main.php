@@ -127,6 +127,10 @@ div
             $date = date("Y-m-d", $DateOfLastSunday); // This then converts it to a date in the format Y-m-d
             // $date = date("Y-m-d", strtotime("-".date("w")." days")); (This is how I had it before, not broken down)
 
+            $DateLastSundayInSecondsSinceUnixEpoch= time () - ($DayOfWeekNumber * 60 * 60 * 24);
+            $DateLastSundayInYMD = date ("Y-m-d", $DateLastSundayInSecondsSinceUnixEpoch);
+            $date = $DateLastSundayInYMD
+
             $articles_db = $db->collection('articles');
             $query = $articles_db
                 ->where('date', '=', $date)
