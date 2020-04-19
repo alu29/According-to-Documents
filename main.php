@@ -86,11 +86,6 @@ input:focus
     font-size: 18px;
 }
 
-.centeredtext
-{
-    text-align:center;
-}
-
 div
 {
     padding: 25px;
@@ -120,7 +115,6 @@ div
 
 <body>
    
-<!-- <h1 class="centeredtext">According to Documents</h1> -->
 <CENTER><img src="logo.png" width=250 height=250></CENTER>
 
 <?php
