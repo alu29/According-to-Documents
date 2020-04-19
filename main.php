@@ -128,7 +128,7 @@ div
 
 <body>
    
-<CENTER><img src="logo.png" width=250 height=250></CENTER>
+<CENTER><a href="/"><img src="logo.png" width=250 height=250></a></CENTER>
 
 <?php
 if(!$mobile)
