@@ -140,7 +140,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>. Both covered Venezuela for years, reporting on its humanitarian crisis, covering protests and investigating high-level, multi-billion dollar government corruption. Girish is now the CTO of artificial intelligence-based startup <a href="http://deepnews.ai/">DeepNews</a> and Alexandra is a Special Correspondent for Reuters in India.
+        <p>According to Documents was created by <a href="https://www.girishgupta.com">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/">Alexandra Ulmer</a>. Both covered Venezuela for years, reporting on its humanitarian crisis, covering protests and investigating high-level, multi-billion dollar government corruption. Girish is now the CTO of artificial intelligence-based startup <a href="http://deepnews.ai/">Deepnews</a> and Alexandra is a Special Correspondent for Reuters in India.
         <!-- <br><br>
         Alexandra is a Special Correspondent with <i>Reuters</i> in India, charged with investigating XXX. Before that, she lifted the lid on Venezuela's corrupt state oil company, revealing XXX, and also XXX. Her work won her Reuters' Reporter of the Year award in 201X.
         <br><br>
