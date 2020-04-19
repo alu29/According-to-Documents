@@ -1,5 +1,5 @@
 cron:
   - description: "Get data from Google Sheet"
     url: /getfromsheet
-    schedule: every 1 minutes
+    schedule: every 60 minutes
     target: default
