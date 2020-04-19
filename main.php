@@ -215,7 +215,16 @@ if(!$mobile)
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8deb0bb0f3dfe79212f9cef9c_09c1bd8f01" tabindex="-1" value=""></div>
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-width: 2px;color:#374E5A">
             </form>
-        </p>
+
+            <br><br>
+
+            <h1>Got a suggestion?</h1>
+            <form action="submit.php" method="post">
+                <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and those covering underreported issues or countries.</p><br>
+                <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
+                <input type="url" value="" name="url" placeholder="URL" style="width:70%;"><br><br>
+                <input type="submit" value="Make Your Suggestion" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
+            </form>
 <?php
 if(!$mobile)
 {
