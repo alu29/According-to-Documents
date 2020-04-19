@@ -129,8 +129,21 @@ div
 </head>
 
 <body>
+
+<?php
+
+if($mobile)
+{
+    $LogoSize = "75%";
+}
+else
+{
+    $LogoSize = "250";
+}
+
+?>
    
-<CENTER><a href="/"><img src="logo.png" width=250 height=250></a></CENTER>
+<CENTER><a href="/"><img src="logo.png" width=<?php echo $LogoSize; ?> height=<?php echo $LogoSize; ?>></a></CENTER>
 
 <?php
 if(!$mobile)
