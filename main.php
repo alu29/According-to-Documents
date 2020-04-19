@@ -23,6 +23,19 @@ else
     $mobile = false;
 }
 
+require_once 'vendor/autoload.php';
+use Google\Cloud\Firestore\FirestoreClient;
+$db = new FirestoreClient();
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $data = [
+        'date' => date('Y-m-d'),
+        'url' => $_POST['url']
+    ];
+    $db->collection('submissions')->add($data);
+}
+
 ?>
 <!DOCTYPE html> 
 <html>
@@ -150,9 +163,6 @@ if(!$mobile)
 
 
         <?php
-            require_once 'vendor/autoload.php';
-            use Google\Cloud\Firestore\FirestoreClient;
-            $db = new FirestoreClient();
 
             function DateLastSundayInYMD()
             {
@@ -210,12 +220,23 @@ if(!$mobile)
             <br><br>
 
             <h1>Got a suggestion?</h1>
-            <form action="/submit" method="post">
-                <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and those covering underreported issues or countries.</p><br>
-                <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
-                <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
-                <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
-            </form>
+            <?php
+                if($_SERVER["REQUEST_METHOD"] != "POST")
+                {
+            ?>
+                <form action="/" method="post">
+                    <p>Help us highlight worthwhile reporting by submitting it below. We welcome work by freelancers, smaller publications and those covering underreported issues or countries.</p><br>
+                    <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
+                    <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
+                    <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
+                </form>
+            <?php
+                }
+                else
+                {
+                    echo "<p><font color=#".$HighlightColor." size=8>Thank you!</font</p>";
+                }
+            ?>
 <?php
 if(!$mobile)
 {
