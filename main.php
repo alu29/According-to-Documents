@@ -215,9 +215,23 @@ if(!$mobile)
             }
         ?>
         
-        <a href="#" onclick="ShowHide()">See archive...</a>
-        <div id="Archive" style= "display:none">
-            This is my DIV element.
+        <p><a href="#" onClick="ShowHide()">See archive...</a></p>
+        <div id="archive" style="display:none">
+            <?php
+                        $articles_db = $db->collection('articles');
+                        $query = $articles_db;
+                        $articles = $query->documents();
+            
+                        foreach ($articles as $article)
+                        {
+                            if ($article->exists())
+                            {
+                                echo "<p class=\"publisher_or_sources\"><i>".$article['publisher']."</i> citing <b>".$article['sources']."</b></p>";
+                                echo "<p class=\"headline\"><a href=\"".$article['url']."\" target=\"_blank\">".$article['headline']."</a></p>";
+                                echo "<br>";
+                            }
+                        }
+            ?>
         </div>
 <?php
 
@@ -277,7 +291,7 @@ if(!$mobile)
     
 <script>
 function ShowHide() {
-  var x = document.getElementById("Archive"); // Variable is the archive element //
+  var x = document.getElementById("archive"); // Variable is the archive element //
   if (x.style.display === "none") { // If the DIV element is not showing, then 
     x.style.display = "block"; // Show it 
   } else { // if it is showing   
