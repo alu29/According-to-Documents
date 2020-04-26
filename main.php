@@ -214,6 +214,11 @@ if(!$mobile)
                 }
             }
         ?>
+        
+        <a href="#" onclick="ShowHide()">See archive...</a>
+        <div id="Archive" style= "display:none">
+            This is my DIV element.
+        </div>
 <?php
 
 if(!$mobile)
@@ -269,6 +274,17 @@ if(!$mobile)
 <p><font size=6><a href="https://www.twitter.com/accordingtodocs" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://github.com/alu29/According-to-Documents" target="_blank"><i class="fab fa-github"></i></a></p>
 <p><font size=2>&copy; 2020 Girish Gupta and Alexandra Ulmer </font></p>
 </CENTER>
+    
+<script>
+function ShowHide() {
+  var x = document.getElementById("Archive"); // Variable is the archive element //
+  if (x.style.display === "none") { // If the DIV element is not showing, then 
+    x.style.display = "block"; // Show it 
+  } else { // if it is showing   
+    x.style.display = "none"; // then hide it
+  }
+}
+</script>
 
 </body>
 </html>
