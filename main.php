@@ -24,17 +24,34 @@ else
 }
 
 require_once 'vendor/autoload.php';
+
 use Google\Cloud\Firestore\FirestoreClient;
 $db = new FirestoreClient();
 
+use \DrewM\MailChimp\MailChimp; //https://github.com/drewm/mailchimp-api
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $data = [
-        'date' => date('Y-m-d'),
-        'url' => $_POST['url']
-    ];
-    $db->collection('submissions')->add($data);
+    if (isset($_POST['url']))
+    {
+        $data = [
+            'date' => date('Y-m-d'),
+            'url' => $_POST['url']
+        ];
+        $db->collection('submissions')->add($data);
+    }
+    if (isset($_POST['email']))
+    {
+        require_once("mailchimpapikey.php"); // Contains nothing but $MailChimpAPIKey = "...";
+        $MailChimp = new MailChimp($MailChimpAPIKey);
+        $MailChimp->post("lists/09c1bd8f01/members", [
+            'email_address' => $_POST['email'],
+            'status'        => 'subscribed',
+        ]);
+    }
 }
+
+
 
 ?>
 <!DOCTYPE html> 
@@ -245,20 +262,28 @@ if(!$mobile)
 ?>
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
-            <form action="https://girishgupta.us6.list-manage.com/subscribe/post?u=8deb0bb0f3dfe79212f9cef9c&amp;id=09c1bd8f01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <?php
+                if(!isset($_POST['email']))
+                {
+            ?>
+            <form action="/" method="post">
                 <p>You'll get one email every Sunday with our selection of the week's top document-based investigative reporting. (We won't share your email address or spam you.)</p><br>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" style="width:70%;">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8deb0bb0f3dfe79212f9cef9c_09c1bd8f01" tabindex="-1" value=""></div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-width: 2px;color:#374E5A">
+                <input type="email" value="" name="email" placeholder="Email" style="width:70%;">
+                <input type="submit" value="Subscribe" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
             </form>
+            <?php
+                }
+                else
+                {
+                    echo "<p><font color=#".$HighlightColor." size=8>You're subscribed!</font></p>";
+                }
+            ?>
 
             <br><br>
 
             <h1>Got a suggestion?</h1>
             <?php
-                if($_SERVER["REQUEST_METHOD"] != "POST")
+                if(!isset($_POST['url']))
                 {
             ?>
                 <form action="/" method="post">
