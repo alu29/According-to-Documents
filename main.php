@@ -28,35 +28,13 @@ require_once 'vendor/autoload.php';
 use Google\Cloud\Firestore\FirestoreClient;
 $db = new FirestoreClient();
 
-use \DrewM\MailChimp\MailChimp; //https://github.com/drewm/mailchimp-api
-
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    if (isset($_POST['url']))
-    {
-        $data = [
-            'date' => date('Y-m-d'),
-            'url' => $_POST['url']
-        ];
-        $db->collection('submissions')->add($data);
-    }
-    if (isset($_POST['email']))
-    {
-        require_once("mailchimpapikey.php"); // Contains nothing but $MailChimpAPIKey = "...";
-        $MailChimp = new MailChimp($MailChimpAPIKey);
-        $MailChimp->post("lists/09c1bd8f01/members", [
-            'email_address' => $_POST['email'],
-            'status'        => 'subscribed',
-        ]);
-    }
-}
-
 ?>
 <!DOCTYPE html> 
 <html>
 <head>
 <title><?php echo $Title."-".$Subtitle; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <script src="https://kit.fontawesome.com/9057082ce7.js" crossorigin="anonymous"></script>
 <style>
@@ -140,6 +118,18 @@ div
   gtag('js', new Date());
 
   gtag('config', 'UA-151140334-2');
+</script>
+<script type="text/javascript">
+function AddToMailingList(email){
+  $.post("formaction.php", {email: email} , function(data){
+            $("#mailinglistresult").html(data);
+          });}
+</script>
+<script type="text/javascript">
+function Submit(url){
+  $.post("formaction.php", {url: url} , function(data){
+            $("#submitresult").html(data);
+          });}
 </script>
 </head>
 
@@ -260,43 +250,16 @@ if(!$mobile)
 ?>
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
-            <?php
-                if(!isset($_POST['email']))
-                {
-            ?>
-            <form action="/" method="post">
                 <p>You'll get one email every Sunday with our selection of the week's top document-based investigative reporting. (We won't share your email address or spam you.)</p><br>
-                <input type="email" value="" name="email" placeholder="Email" style="width:70%;">
-                <input type="submit" value="Subscribe" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
-            </form>
-            <?php
-                }
-                else
-                {
-                    echo "<p><font color=#".$HighlightColor." size=8>You're subscribed!</font></p>";
-                }
-            ?>
-
-            <br><br>
+                <input type="email" value="" id="email" placeholder="Email" style="width:70%;">
+                <input type="submit" value="Subscribe" name="subscribe" class="button" style="border-width: 2px;color:#374E5A" onClick=AddToMailingList(document.getElementById("email").value)>
+                <div id="mailinglistresult"></div>
 
             <h1>Got a suggestion?</h1>
-            <?php
-                if(!isset($_POST['url']))
-                {
-            ?>
-                <form action="/" method="post">
-                    <p>Help us highlight worthwhile reporting by submitting it below or <a href="mailto:hi@accordingtodocuments.com">emailing us</a>. We welcome work by freelancers, smaller publications and journalists covering underreported issues or countries.</p><br>
-                    <!-- <input type="email" value="" name="email" placeholder="Your email" style="width:70%;"><br><br> -->
-                    <input type="url" value="" name="url" placeholder="URL" style="width:70%;"> 
-                    <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A">
-                </form>
-            <?php
-                }
-                else
-                {
-                    echo "<p><font color=#".$HighlightColor." size=8>Thank you!</font></p>";
-                }
-            ?>
+                <p>Help us highlight worthwhile reporting by submitting it below or <a href="mailto:hi@accordingtodocuments.com">emailing us</a>. We welcome work by freelancers, smaller publications and journalists covering underreported issues or countries.</p><br>
+                <input type="url" value="" id="url" placeholder="URL" style="width:70%;"> 
+                <input type="submit" value="Submit" name="subscribe" class="button" style="border-width: 2px;color:#374E5A" onClick=Submit(document.getElementById("url").value)>
+                <div id="submitresult"></div>
 <?php
 if(!$mobile)
 {
