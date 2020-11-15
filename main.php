@@ -1,5 +1,7 @@
 <?php
 
+require_once('cnct.php');
+
 $Title = "According to Documents";
 $Subtitle = "Investigative journalism of the highest caliber";
 
@@ -22,11 +24,6 @@ else
 {
     $mobile = false;
 }
-
-require_once 'vendor/autoload.php';
-
-use Google\Cloud\Firestore\FirestoreClient;
-$db = new FirestoreClient();
 
 ?>
 <!DOCTYPE html> 
@@ -168,7 +165,7 @@ if(!$mobile)
         </p>
 
         <h1>About</h1>
-        <p><i>According to Documents</i> was created in April 2020 by investigative reporters <a href="https://www.girishgupta.com" target="_blank">Girish Gupta</a>, now CTO at <i>Deepnews.ai</i>, and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>, a Special Correspondent at <i>Reuters</i>.
+        <p><i>According to Documents</i> was created by investigative reporters <a href="https://www.girishgupta.com/" target="_blank">Girish Gupta</a> and <a href="https://www.alexandraulmer.com/" target="_blank">Alexandra Ulmer</a>.
         </p>
 
 <?php
@@ -196,46 +193,34 @@ if(!$mobile)
                 // $date = date("Y-m-d", strtotime("-".date("w")." days")); (This is how Girish had it before, not broken down)
 
                 // Alexandra's other way of doing it.
-                // $DateLastSundayInSecondsSinceUnixEpoch= time () - ($DayOfWeekNumber * 60 * 60 * 24);
+                // $DateLastSundayInSecondsSinceUnixEpoch = time () - ($DayOfWeekNumber * 60 * 60 * 24);
                 // $DateLastSundayInYMD = date ("Y-m-d", $DateLastSundayInSecondsSinceUnixEpoch);
                 // $date = $DateLastSundayInYMD;
                 
                 return $date;
             }
 
-            $articles_db = $db->collection('articles');
-            $query = $articles_db
-                ->where('date', '=', DateLastSundayInYMD())
-                ->limit(5);
-            $articles = $query->documents();
+            $top_articles = mysqli_query($link, "SELECT * FROM articles WHERE date = '".DateLastSundayInYMD()."' ORDER BY date DESC LIMIT 0,5");
 
-            foreach ($articles as $article)
+            while($top_article = mysqli_fetch_array($top_articles))
             {
-                if ($article->exists())
-                {
-                    echo "<p class=\"publisher_or_sources\"><i>".$article['publisher']."</i> citing <b>".$article['sources']."</b></p>";
-                    echo "<p class=\"headline\"><a href=\"".$article['url']."\" target=\"_blank\">".$article['headline']."</a></p>";
-                    echo "<br>";
-                }
+                echo "<p class=\"headline\"><a href=\"".$top_article['url']."\" target=\"_blank\">".$top_article['headline']."</a></p>";
+                echo "<p class=\"publisher_or_sources\"><i>".$top_article['publisher']."</i> citing <b>".$top_article['sources']."</b></p>";
+                echo "<br>";
             }
         ?>
         
         <p><a href="#" onClick="ShowHide()">See archive...</a></p>
         <div id="archive" style="display:none">
             <?php
-                        $articles_db = $db->collection('articles');
-                        $query = $articles_db;
-                        $articles = $query->documents();
-            
-                        foreach ($articles as $article)
-                        {
-                            if ($article->exists())
-                            {
-                                echo "<p class=\"publisher_or_sources\"><i>".$article['publisher']."</i> citing <b>".$article['sources']."</b></p>";
-                                echo "<p class=\"headline\"><a href=\"".$article['url']."\" target=\"_blank\">".$article['headline']."</a></p>";
-                                echo "<br>";
-                            }
-                        }
+                $all_articles = mysqli_query($link, "SELECT * FROM articles ORDER BY date DESC");
+
+                while($all_article = mysqli_fetch_array($all_articles))
+                {
+                    echo "<p class=\"headline\"><a href=\"".$all_article['url']."\" target=\"_blank\">".$all_article['headline']."</a></p>";
+                    echo "<p class=\"publisher_or_sources\"><i>".$all_article['publisher']."</i> citing <b>".$all_article['sources']."</b></p>";
+                    echo "<br>";
+                }
             ?>
         </div>
 <?php

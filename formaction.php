@@ -1,32 +1,24 @@
 <?php
 
-require_once 'vendor/autoload.php';
-
-use Google\Cloud\Firestore\FirestoreClient;
-$db = new FirestoreClient();
-
-use \DrewM\MailChimp\MailChimp; //https://github.com/drewm/mailchimp-api
+require_once('cnct.php');
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     if (isset($_POST['url']))
     {
-        $data = [
-            'date' => date('Y-m-d'),
-            'url' => $_POST['url']
-        ];
-        $db->collection('submissions')->add($data);
+        $stmt_insert = $link->prepare("INSERT INTO submissions (url) VALUES (?)");
+        $stmt_insert->bind_param("s", $_POST['url']);
+        $stmt_insert->execute();
+        $stmt_insert->close();
 
         echo "<p>We've received your suggestion! Thank you.</p>";
     }
     if (isset($_POST['email']))
     {
-        require_once("mailchimpapikey.php"); // Contains nothing but $MailChimpAPIKey = "...";
-        $MailChimp = new MailChimp($MailChimpAPIKey);
-        $MailChimp->post("lists/09c1bd8f01/members", [
-            'email_address' => $_POST['email'],
-            'status'        => 'subscribed',
-        ]);
+        $stmt_insert = $link->prepare("INSERT INTO subscribers (email) VALUES (?)");
+        $stmt_insert->bind_param("s", $_POST['url']);
+        $stmt_insert->execute();
+        $stmt_insert->close();
 
         echo "<p>You're subscribed! Thank you.</p>";
     }
