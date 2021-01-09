@@ -235,7 +235,6 @@ if(!$mobile)
 ?>
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
-                <p>You'll get one email every Sunday with our selection of the week's top document-based investigative reporting. (We won't share your email address or spam you.)</p><br>
                 <iframe src="https://accordingtodocuments.substack.com/embed" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
             <h1>Got a suggestion?</h1>
