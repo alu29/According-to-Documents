@@ -13,15 +13,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         echo "<p>We've received your suggestion! Thank you.</p>";
     }
-    if (isset($_POST['email']))
-    {
-        $stmt_insert = $link->prepare("INSERT INTO subscribers (email) VALUES (?)");
-        $stmt_insert->bind_param("s", $_POST['url']);
-        $stmt_insert->execute();
-        $stmt_insert->close();
+    // if (isset($_POST['email']))
+    // {
+    //     $stmt_insert = $link->prepare("INSERT INTO subscribers (email) VALUES (?)");
+    //     $stmt_insert->bind_param("s", $_POST['url']);
+    //     $stmt_insert->execute();
+    //     $stmt_insert->close();
 
-        echo "<p>You're subscribed! Thank you.</p>";
-    }
+    //     echo "<p>You're subscribed! Thank you.</p>";
+    // }
 }
 
 ?>
