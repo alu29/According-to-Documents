@@ -236,9 +236,7 @@ if(!$mobile)
             <!-- Form copied (and heavily edited) from Mailchimp website, which provided correct form action, hidden variables, etc. https://us6.admin.mailchimp.com/lists/integration/embeddedcode?id=265953 -->
             <h1>Subscribe</h1>
                 <p>You'll get one email every Sunday with our selection of the week's top document-based investigative reporting. (We won't share your email address or spam you.)</p><br>
-                <input type="email" value="" id="email" placeholder="Email" style="width:70%;">
-                <input type="submit" value="Subscribe" name="subscribe" class="button" style="border-width: 2px;color:#374E5A" onClick=AddToMailingList(document.getElementById("email").value)>
-                <div id="mailinglistresult"></div>
+                <iframe src="https://accordingtodocuments.substack.com/embed" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
             <h1>Got a suggestion?</h1>
                 <p>Help us highlight worthwhile reporting by submitting it below or <a href="mailto:hi@accordingtodocuments.com">emailing us</a>. We welcome work by freelancers, smaller publications and journalists covering underreported issues or countries.</p><br>
