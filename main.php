@@ -34,6 +34,7 @@ else
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <script src="https://kit.fontawesome.com/9057082ce7.js" crossorigin="anonymous"></script>
+<script defer data-domain="accordingtodocuments.com" src="https://plausible.io/js/plausible.js"></script>
 <style>
 body
 {
