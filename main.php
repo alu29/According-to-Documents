@@ -201,7 +201,7 @@ if(!$mobile)
                 return $date;
             }
 
-            $top_articles = mysqli_query($link, "SELECT * FROM articles WHERE date = '".DateLastSundayInYMD()."' ORDER BY date DESC LIMIT 0,5");
+            $top_articles = mysqli_query($link, "SELECT * FROM articles WHERE date > '".DateLastSundayInYMD()."' ORDER BY date DESC LIMIT 0,5");
 
             while($top_article = mysqli_fetch_array($top_articles))
             {
